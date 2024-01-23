@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Downloads</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta http-equiv="cache-control" content="max-age=0" />
+   <meta http-equiv="cache-control" content="no-cache" />
+   <meta http-equiv="expires" content="0" />
+   <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+   <meta http-equiv="pragma" content="no-cache" />
+   <!-- <link rel="icon" href="/img/favicon.ico" type="image/x-icon" /> -->
+   <!-- <link href="./img/styles.css" rel="stylesheet"> -->
+   <!-- <script src="./img/jquery-3.6.1.min.js" type="text/javascript"></script> -->
+   <!-- *    { margin:0; border:0; padding:0; } -->
+   <style>
+body {
+   width:100%;
+   height:100%;
+   color:white; 
+   background-color:rgb(10,10,10);     
+   font-family:monospace;
+   font-size:16px;
+   
+   //background:url(./solar.jpg);
+   //background-repeat: no-repeat;
+   //background-size: cover;
+   //background-size: 100%;
+}
+
+/* Reihenfolge wichig! <L>o<V>e <F>or <H><A>te 
+a:link { color:rgb(255,128,33); text-decoration:none; }
+a:visited { color:rgb(235,186,33); text-decoration:none; }
+a:focus { color:rgb(255,128,33); text-decoration:none; }
+a:hover { color:rgb(255,200,133); text-decoration:underline; }
+a:active { color:rgb(200,88,33); text-decoration:none; }
+*/
+
+footer
+{
+   background-color:#202020;
+   color:white; 
+   position:fixed; 
+   bottom:0px; 
+   left:0px; 
+   width:100%; 
+   height:32px; 
+   line-height:32px;
+   z-index:3;
+}
+ 
+   </style>
+   
+</head>
+
+<body>
+
+   <h1>Benni's GNU/Linux C/C++ Toolchain for Windows64:</h1>
+   
+   <p>This toolchain brings the bright Linux64 C/C++ development world to Windows64.
+   <br>U will never need a Microsoft IDE or Microsoft compiler to build fully
+        functional and high performance Windows apps.
+   <br>All is done using free available and platform independent tools:
+   <br>CMake, MinGW compiler, git4windows and NASM assembler.
+   <br>Any multimedia app and library ( e.g. Steinberg VST Audio Plugins )
+   <br>is possible using only (mostly) free software</p>
+   
+   <h1>Advantages of my Toolchain:</h1>
+   <ul>
+      <li><b><i>DAU safe, easy to read, easy to understand and to contribute to.</i></b></li>
+      <br>
+      <li><b><i>Colored console messages (e.g. errors are red). Surprises Visual Studio users everytime, even graphics programmers.</i></b></li>
+      <br>
+      <li><b><i>A terminal with history ( remembers last used commands ) and auto-completion.</i></b></li>
+      <br>
+      <li><b><i>Uses C++17 standard as default ( has std::filesystem, smart pointers, make_unique<>, etc.. )</i></b></li>
+      <br>
+      <li><b><i>Only 3 programs have to be installed on Windows64 (QtSDK, CMake, git4windows)</i></b></li>
+      <br>
+      <ol>
+         <li>QtSDK</li>
+         <ul>
+            <li>The QtSDK is a real life saver and the most important program package in the last 20yrs</li>
+            <li>brings QtCreator, the IDE i daily use since 2016 (Visual Studio replacement).</li>
+            <li>brings MinGW64 GNU C/C++ compiler suite, atleast version 7.3.1 x64</li>
+            <ul>
+               <li>contains gcc.exe (C compiler)</li>
+               <li>contains g++.exe (C++ compiler)
+               <li>contains other compilers like fortran, a GNU assembler, etc...</li>
+               <li>contains gdb.exe (Debugger)</li>
+               <li>contains windres.exe (RC resource compiler, so u can develop win32 dialogs and embed window icons)</li>
+               <li>contains mingw32-make.exe (make replacement)</li>
+               <ul>
+                  <li>I dont use MSYS anymore.</li>
+                  <li>I dont use CYGWIN.</li>
+                  <li>I dont use MSYS2, but git4windows probably does itself.</li>
+               </ul>                 
+            </ul>    
+            <li>brings precompiled dlls for graphical user interface development ( aka QtCore, QtWidgets, etc... ).</li>
+         </ul>         
+         <br>              
+         <li>CMake, atleast version 3.14</li>
+         <ul>
+            <li>All libraries, applications and assembler inside the Benni toolchain are built with custom CMake recipes.</li>
+         </ul>         
+         <br>
+         <li>Git4Windows ( my daily used ANSI colored terminal + git )</li>
+         <ul>
+            <li>This program also brings /etc/bash.rc to customize your terminal promt.</li>
+         </ul>
+      </ol>
+      <br>
+      <li><b><i>You can develop any multimedia program (audio,video,3D and network) on Win64 using free GNU/Linux tools</i></b></li>    
+      <br>
+      <li><b><i>Includes NASM.exe assembler by source</i></b></li>    
+      <br>
+      <ul>
+         <li>Used to build high performance audio and video codec libs (e.g. x264, x265 )</li>
+         <li>I want to be able to build FFMPEG (libAV) with my toolchain on Win64, but FFMPEG itself uses 100+ other (complicated and high perf) libs.</li>
+      </ul>     
+      <br>
+      <li><b><i>99% of libraries are included by source code (e.g. jpeg8d, png, zlib, boost, CGAL, vst2sdk).</i></b></li>         
+      <br>
+      <ul>
+         <li>No incompatible libs ( due to different compile and link options )</li>
+         <li>Full control, easier debugging/profiling and custom UnitTesting.</li>
+         <li>Bug fixing without having to rely on the vendor to update precompiled libs</li>
+         <li>Increased security ( your custom changes lead to different libs, making fix address attacks unlikely )</li>
+         <li>Minimal project size, text is compressed much better than dlls.</li>
+         <li>High portability.</li>
+         <li>Less debugging due to less differences of runtimes.</li>
+      </ul>  
+      <br>      
+      <li><b><i>1% of libraries that are NOT included by source code.</i></b></li>         
+      <br>
+      <ul>
+         <li>FFMPEG is included by precompiled shared libs (still, to be changed).</li>
+         <li>wxWidgets is included by precompiled shared libs (still, to be changed).</li>
+         <li>libFMOD is included by precompiled shared libs, because its a proprietary, closed source lib.</li>
+         <li>QtWidgets is included by precompiled shared libs (static linking is forbidden without license, proprietary libs).</li>
+      </ul>
+      <br>
+      <li><b><i>I dont use Microsoft Visual Studio to develop C/C++ programs for Windows.</i></b></li>
+      <br>
+      <ul>
+         <li>Developer does not waste time with multiple runtimes (MT,MTd,MD,MDd)</li>
+         <li>This alone increases your productivity by 100%</li>
+         <li>Developer has a better terminal (with colors), not the worst-case cmd.exe</li>
+         <li>Developer uses same codebase and tools for Linux and Windows</li>
+         <li>The VS dialog to add libraries is the same nightmare since 1998.</li>
+      </ul>
+      <br>
+      <li><b><i>I dont use configure scripts</i></b></li>
+      <br>
+      <ul>
+         <li>Configure scripts are slow and single threaded, which would increase build times.</li>
+         <li>My toolchain is 100% of time at 100% CPU usage, meaning minimal build time.</li>
+         <li>Time is money.</li>
+      </ul>
+      <br>      
+      <li><b><i>I use CMake as project files</i></b></li>
+      <br>
+      <ul>
+         <li>Platform independent tool for Win,Linux,MacOS</li>
+         <li>Adding your custom libs and apps is just a matter of copying and adapting a preset.</li>
+         <li>My minimal apps and various libs gives you a preset for any existing lib and project type.</li>
+         <li>QtCreator (my IDE) can open CMake projects</li>
+         <li>VisualCode can open CMake projects</li>
+         <li>CMake files are programs themselfs</li>
+         <li>CMake is much easier than makefiles</li>
+         <li>I only use a small subset of CMake commands to make it easy and reliable.</li>
+         <li>VS project-files are not programmable.</li>
+         <li>Qt project-files are not programmable.</li>
+         <li>Eclipse project-files are not programmable.</li>
+         <li>Codeblocks project-files are not programmable.</li>
+      </ul>           
+      <br>
+   </ul>
+   <h1>Disadvantages of my Toolchain:</h1>
+   <ul>
+      <li>I dont invest much of my finite lifetime in Apple closed systems (MacOS, iOS). </li>
+      <li>I dont invest much of my finite lifetime in Google closed systems (Android).</li>
+      <li>No MFC, ATL since its M$ only. But you have win32Api and windres RC resource compiler</li>
+      <li>A small learning curve</li>
+   </ul>   
+   
+<div>
+   <table width="90%">
+   <tr><td><h1>Benni's additional daily used tools</h1></td></tr>
+   <tr><td><h3 align="center"><u>7zip</u></h3></td></tr>
+   <tr><td>
+      The best file compressor/decompressor for me.<br>
+      I dont use winrar or the like<br>
+      My programs ofcourse still use zip, bzip2, because much depend on them.
+   </td></tr>
+   <tr><td>
+      But you wont be able to test any of my programs without 7zip since they are all compressed that way.
+   </td></tr>
+   <tr><td><h3 align="center"><u>Notepad++</u></h3></td></tr>
+   <tr><td>
+      The old notepad.exe is the next ugly program that never got better at anything.<br>
+      Replacing it is a must for developer.<br>
+      Notepad++ can syntax highlighting and can convert between encoding like UTF-8 with or w/o BOM<br>
+      Could use some plugins to better understand shaders (glsl).<br>
+   </td></tr>  
+      <tr><td><h3 align="center"><u>IrfanView</u></h3></td></tr>
+   <tr><td>
+      Must have for graphics programmers. Best and fastest image viewer, easy to say
+      because the competition is just really bad.
+      Shows hex colors of pixels on mouseclick, can resize and rotate images. 
+      Does handle transparency well, but not perfect. 
+      Has Atleast 100x faster startup than gimp or such monsters.
+      Can view many formats, not all. Can export many formats, not all ( e.g. .xpm missing )
+      Can decompose gif animations into its frames. Views .ico files good enough.
+      Has many filters and counts unique colors.
+   </td></tr> 
+   <tr><td><h3 align="center"><u>ConEmu</u></h3></td></tr>
+   <tr><td>
+      Another ANSI terminal emulator on Windows. It works but i simply use the terminal in Git4Windows.</br>
+   </td></tr>      
+   <tr><td><h3 align="center"><u>ASIO4ALL free audio driver</u></h3></td></tr>
+   <tr><td>
+      A must have for audio developers and producers with generic soundcards.
+      I install this driver on any of my Windows machines, to develop realtime audio with RtAudio mostly.
+      I currently dont have any special ASIO hardware.<br> 
+      I used to have more professional Audio hardware when i was developing at AlcaTech GmbH in Dresden</br>
+   </td></tr>      
+   <tr><td><h3 align="center"><u>OpenAL audio driver</u></h3></td></tr>
+   <tr><td>
+      Some apps and libraries depend on it, e.g. libSFML.
+      Is yet another audio driver needed for some apps, its kinda easy to program with but latencies are not 
+      really low, because it uses DSound itself asfar as i understand with almost 120ms latencies. 
+      Enough for playing music in games, but not low enough for producing music.<br> 
+   </td></tr>
+   <tr><td><h3 align="center"><u>VLC</u></h3></td></tr>
+   <tr><td>
+      Can play almost any video, audio and image file. Based on FFMPEG (libAVCodec) and QtSDK.
+      My daily video/DVD viewer and music player. Didnt test Blue-Ray since a long time.
+   </td></tr>
+   <tr><td><h3 align="center"><u>Handbrake</u></h3></td></tr>
+   <tr><td>
+      Ok video converter. Sadly does not extract audio only.
+   </td></tr>
+   <tr><td><h3 align="center"><u>ClipGrab</u></h3></td></tr>
+   <tr><td>
+      Download high resolution videos from Youtube. My browser plugins stops at 720p. Anything higher
+      is grabbed using this tool. Based on yt-download.
+   </td></tr>
+   <tr><td><h3 align="center"><u>Virtual-TI / ti-emu</u></h3></td></tr>
+   <tr><td>
+      My desktop calculator app. You need to own a Texas Instrument Ti89 or higher to be able to use it.
+      Since u need a ROM downloaded from the calculator. Sharing is forbidden.
+      The investment of 150€ (2003) was worth it and i never did regret it for one second.
+      I dont advertise for CASIO calculators since i dont like them ( my opinion was formed 2003 ).
+   </td></tr>
+   </table>
+</div>
+   
+
+</body>
+</html>

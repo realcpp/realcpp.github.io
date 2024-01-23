@@ -1,0 +1,133 @@
+*    { margin:0; border:0; padding:0; }
+body {
+   width:100%;
+   height:100%;
+   color:white; 
+   background-color:rgb(10,10,10);     
+   font-family:monospace;
+   font-size:16px;
+   
+   //background:url(./solar.jpg);
+   //background-repeat: no-repeat;
+   //background-size: cover;
+   //background-size: 100%;
+}
+
+/* Reihenfolge wichig! <L>o<V>e <F>or <H><A>te 
+a:link { color:rgb(255,128,33); text-decoration:none; }
+a:visited { color:rgb(235,186,33); text-decoration:none; }
+a:focus { color:rgb(255,128,33); text-decoration:none; }
+a:hover { color:rgb(255,200,133); text-decoration:underline; }
+a:active { color:rgb(200,88,33); text-decoration:none; }
+*/
+header 
+{ 
+   text-align:center;
+   background-color:#808080; 
+   border-color:#444444; 
+   opacity:1.0;
+   position:fixed; 
+   top:0px; 
+   left:30%; 
+   flex:center;
+   border-style: solid; 
+   padding:1px; 
+   border-width: 2px; 
+   border-radius:7px;
+   //width:100%; 
+   line-height:32px; 
+   padding:10px 10px 10px 10px; 
+   //padding-left:10px; 
+   //padding-top:10px; 
+   //padding-right:20px; 
+   //padding-bottom:10px; 
+   z-index:2;
+}
+
+content 
+{ 
+   position:absolute; 
+   top:32px; 
+   padding-top:20px; 
+   white-space:nowrap; 
+}
+
+footer
+{
+   background-color:#202020;
+   color:white; 
+   position:fixed; 
+   bottom:0px; 
+   left:0px; 
+   width:100%; 
+   height:32px; 
+   line-height:32px;
+   z-index:3;
+}
+
+#avatar {
+   width:200px;
+   height:200px;
+   color:white; 
+   padding:50px;
+   background:url(./firestarter.png);
+   //background-repeat: no-repeat;
+   background-size: cover;
+
+   background-color:rgb(10,10,10);     
+   font-family:monospace;
+   font-size:16px;
+
+   border-color:#444444; 
+   border-style: solid; 
+   border-width:  10px; 
+   border-radius:110px;
+}
+
+keywords 
+{ 
+   visibility:hidden; 
+}
+   
+ul#menu { padding: 0;}
+ul#menu li { display: inline; border-style: solid; background-color:#CCCCCC; border-color:#DDDDDD; padding:5px 10px 5px 10px; border-width: 2px; border-radius:7px;}
+ul#menu li a { color: white; background-color: black; text-decoration:none; }
+<!-- ul#menu li a:link {color:green; background-color:transparent; text-decoration:none;} -->
+<!-- ul#menu li a:hover { background-color:orange; background-color:transparent; text-decoration:underline;} -->
+<!-- ul#menu li a:visited {color:pink; background-color:transparent; text-decoration:none;} -->
+<!-- ul#menu li a:active  {color:yellow; background-color:transparent; text-decoration:underline;} -->
+
+
+#t1
+{
+   width:100px; 
+}
+#t2
+{
+   width:300px; 
+}
+#t3
+{
+   width:400px; 
+}
+
+th {
+   border-bottom: 1px solid #ddd;
+}
+
+
+/*
+.lala_radiobutton:hover { background-color: #DDDDDD; }
+.lala_radiobutton:checked { background-color: #88AA88; }
+.lala_radiobutton:active { background-color: #8888AA; }
+.lala_radiobutton:enabled { background-color: #AAAA88; }
+.lala_radiobutton:focus { background-color: #080808; }
+*/
+
+/* Reihenfolge wichig! <L>o<V>e <F>or <H><A>te
+#navi a:link { color:blue; text-decoration:none; }
+#navi a:visited { color:black; text-decoration:line-through; }
+#navi a:focus { color:green; text-decoration:overline; }
+#navi a:hover { color:red; text-decoration:overline; }
+#navi a:active { color:orange; text-decoration:underline; }
+*/
