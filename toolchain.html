@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Downloads</title>
+   <title>Toolchain</title>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <meta http-equiv="cache-control" content="max-age=0" />
@@ -49,14 +49,154 @@ footer
    z-index:3;
 }
  
+a:link { color:rgb(255,128,33); text-decoration:none; }
+a:visited { color:rgb(235,186,33); text-decoration:none; }
+a:focus { color:rgb(255,128,33); text-decoration:none; }
+a:hover { color:rgb(255,200,133); text-decoration:underline; }
+a:active { color:rgb(200,88,33); text-decoration:none; }
+
    </style>
    
 </head>
 
 <body>
 
-   <h1>Benni's GNU/Linux C/C++ Toolchain for Windows64:</h1>
+   <h1>How I develop C++ programs on Win64 using free tools:</h1>
    
+	<h2>(1.) Base packages: cmake,terminal and C++ compiler</h2>
+   <ol>
+      <li>CMake ( project files that run on Win, Linux and Mac, replaces VS project files )
+			<ul>
+				<li><a href="https://cmake.org/download/" target="_blank">https://cmake.org/download/</a></li>
+			</ul>
+		</li>
+      <li>Terminal ( ANSI colored Linux terminal on Windows ) + git ( versioning system used by all developers )
+			<ul>
+				<li><a href="https://gitforwindows.org/" target="_blank">https://gitforwindows.org/</a></li>
+			</ul>
+		</li>
+      <li>GNU C++ Compiler 8/9/10/11/12/13 x64_86 seh ( use <i><b>seh</b></i> version to be compatible with QtSDK precompiled libs )
+			<ul>
+				<li><a href="https://www.mingw-w64.org/downloads/" target="_blank">https://www.mingw-w64.org/downloads/</a></li>
+				<li><a href="https://github.com/niXman/mingw-builds-binaries/releases" target="_blank">https://github.com/niXman/mingw-builds-binaries/releases</a></li>
+				<li><a href="https://www.virustotal.com/gui/file/dbe4de36401906f296c2752afd512891a227a787f3b9cf10115b409feaef39aa" target="_blank">https://www.virustotal.com/gui/file/dbe4de36401906f296c2752afd512891a227a787f3b9cf10115b409feaef39aa</a></li>
+			</ul>
+		</li>		
+
+	
+   </ol>		
+		
+	<h2>(2.) Optional base packages that I use:</h2>
+   <ol>	
+		<li>Notepad++ ( powerful text editor, always useful )
+			<ul>
+				<li><a href="https://notepad-plus-plus.org/downloads/" target="_blank">https://notepad-plus-plus.org/downloads/</a></li>
+			</ul>
+		</li>	
+		<li>QtSDK ( QtCreator, best IDE for me, opens cmake projects, a bit tricky to download and install, needs login )
+			<ul>
+				<li><a href="https://www.qt.io/" target="_blank">https://www.qt.io/</a></li>
+			</ul>
+		</li>		
+		<li>Visual Studio Code ( second best IDE for me, opens cmake projects with addon installed )
+			<ul>
+				<li><a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></li>
+			</ul>
+		</li>			
+		<li>Terminal alternative ( ANSI colored Linux terminal on Windows )
+			<ul>
+				<li><a href="https://conemu.github.io/" target="_blank">https://conemu.github.io/</a></li>
+			</ul>
+		</li>		
+   </ol>
+		
+	<h2>(3.) Daily work tools:</h2>
+   <ol>		
+		<li>7zip ( file compressor/decompressor )
+			<ul>
+				<li><a href="https://7-zip.de/index.html" target="_blank">https://7-zip.de/index.html</a></li>
+			</ul>
+		</li>		
+		<li>IrfanView ( fast multimedia viewer, can rotate,scale and filter images )
+			<ul>
+				<li><a href="https://www.irfanview.de/" target="_blank">https://www.irfanview.de/</a></li>
+			</ul>
+		</li>			
+		<li>VLC ( multimedia viewer, can open any important format )
+			<ul>
+				<li><a href="https://www.videolan.org/vlc/index.de.html" target="_blank">https://www.videolan.org/vlc/index.de.html</a></li>
+			</ul>
+		</li>		
+		<li>Sumatra PDF viewer ( small and free pdf viewer )
+			<ul>
+				<li><a href="https://www.sumatrapdfreader.org/free-pdf-reader" target="_blank">https://www.sumatrapdfreader.org/free-pdf-reader</a></li>
+			</ul>
+		</li>
+   </ol>	
+	
+		
+	<h2>(4.) Audio developer stuff:</h2>
+   <ol>		
+		<li>Steinberg ASIO driver for Windows64
+			<ul>
+				<li><a href="https://asio4all.org/" target="_blank">https://asio4all.org/</a></li>
+			</ul>
+		</li>		
+		<li>Steinberg VSTi SDK ( virtual instrument plugins, if u know what that is you already love it ) 
+			<ul>
+				<li><a href="https://steinbergmedia.github.io/vst3_doc/vstsdk/index.html" target="_blank">https://steinbergmedia.github.io/vst3_doc/vstsdk/index.html</a></li>
+			</ul>
+		</li>			
+		<li>OpenAL ( another driver, worse latency than ASIO, used in games where latency is not so important ) 
+			<ul>
+				<li><a href="https://www.openal.org/downloads/" target="_blank">https://www.openal.org/downloads/</a></li>
+			</ul>
+		</li>		
+   </ol>	
+	
+	<h2>(5.) Converter tools:</h2>
+   <ol>		
+		<li>Handbrake ( can convert DVDs and videos to other videos )
+			<ul>
+				<li><a href="https://handbrake.fr/" target="_blank">https://handbrake.fr/</a></li>
+			</ul>
+		</li>		
+		<li>ClipGrab ( download Youtube videos in high resolution )
+			<ul>
+				<li><a href="https://clipgrab.org/de" target="_blank">https://clipgrab.org/de</a></li>
+			</ul>
+		</li>			
+		<li>Pazera - Free audio converter ( convert video to audio )
+			<ul>
+				<li><a href="https://www.pazera-software.com/" target="_blank">https://www.pazera-software.com/</a></li>
+				<li><a href="https://www.pazera-software.com/products/audio-extractor/" target="_blank">https://www.pazera-software.com/products/audio-extractor/</a></li>				
+			</ul>
+		</li>		
+   </ol>		
+	
+	
+	<h2>(6.) Ti89 titanium calculator ( needs ROM, aka a purchased calculator ):</h2>
+   <ol>		
+		<li>Virtual Ti ( the shell i use mostly on Windows )
+			<ul>
+				<li><a href="https://www.ticalc.org/archives/files/fileinfo/84/8442.html" target="_blank">https://www.ticalc.org/archives/files/fileinfo/84/8442.html</a></li>
+			</ul>
+		</li>		
+		<li>Ti-emu ( yet another shell i use on Windows )
+			<ul>
+				<li><a href="http://lpg.ticalc.org/prj_tiemu/" target="_blank">http://lpg.ticalc.org/prj_tiemu/</a></li>
+			</ul>
+		</li>			
+		<li>Graph 89 Free ( the shell i use on Android smartphones )
+			<ul>
+				<li><a href="https://play.google.com/store/apps/details?id=com.Bisha.TI89Emu&hl=de&gl=US&pli=1" target="_blank">https://play.google.com/store/apps/details?id=com.Bisha.TI89Emu&hl=de&gl=US&pli=1</a></li>
+			</ul>
+		</li>		
+   </ol>		
+	
+	
+	
+	
    <p>This toolchain brings the bright Linux64 C/C++ development world to Windows64.
    <br>U will never need a Microsoft IDE or Microsoft compiler to build fully
         functional and high performance Windows apps.
@@ -67,6 +207,8 @@ footer
    
    <h1>Advantages of my Toolchain:</h1>
    <ul>
+		<li><b><i>Same tools used on Windows, Linux and Mac, aka really platform independent</i></b></li>
+		<br>
       <li><b><i>DAU safe, easy to read, easy to understand and to contribute to.</i></b></li>
       <br>
       <li><b><i>Colored console messages (e.g. errors are red). Surprises Visual Studio users everytime, even graphics programmers.</i></b></li>
