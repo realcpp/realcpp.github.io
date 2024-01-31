@@ -81,11 +81,47 @@ a:active { color:rgb(200,88,33); text-decoration:none; }
 				<li><a href="https://github.com/niXman/mingw-builds-binaries/releases" target="_blank">https://github.com/niXman/mingw-builds-binaries/releases</a></li>
 				<li><a href="https://www.virustotal.com/gui/file/dbe4de36401906f296c2752afd512891a227a787f3b9cf10115b409feaef39aa" target="_blank">https://www.virustotal.com/gui/file/dbe4de36401906f296c2752afd512891a227a787f3b9cf10115b409feaef39aa</a></li>
 			</ul>
-		</li>		
-
-	
+		</li>				
    </ol>		
 		
+	<h3><p style="color:red; font-weight:900;" >Solve some encountered problems:</h3>		
+	<ol>
+		<li>sh.exe makes problems ( for build scripts and other scripts )
+			<ul>
+			<li>Delete all sh.exe, because we only use bash.exe</li>
+			<li>You can compress before if u like, but you really dont need sh.exe</li>
+			<li>Theres probably more than one sh.exe</li>
+			<li>Look in folders from QtSDK, compiler and Git4Windows</li>
+			</ul>
+		</li>
+		
+		<li>FILEOPTIONDIALOG or TASDIALOGCONFIG not found while compiling win32 apps
+		<ul>
+		<li>Your _mingw.h Header must be edited/modifed</li>
+		<li>From:
+		<pre>
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x502 // Old winXP and server2003
+#endif
+		</pre></li>
+		<li>To:
+		<pre>
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x600 // Atleast Vista
+#endif
+		</pre></li>
+		</ul>					
+		</li>
+		
+		<li>Dont install Strawberry Perl from QtSDK
+			<ul>
+			<li>It comes with an old gcc 4 that messes up your PATH variable</li>
+			<li>Gcc 4 then becomes your main compiler and nobody wants that</li>
+			</ul>
+		</li>
+		
+	</ol>
+	
 	<h2>(2.) Optional base packages that I use:</h2>
    <ol>	
 		<li>Notepad++ ( powerful text editor, always useful )
