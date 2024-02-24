@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   <title>WGL Shader Art (C++ Desktop OpenGL WGL, GLEW, GLM, Font5x8, cmake, mingw, git4win)</title>
+   <title>Siedler3D OpenGL Game SinglePlayer Desktop (C++, real desktop OpenGL, GLM, Font5x8, cmake, mingw7.3_x64)</title>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <meta http-equiv="cache-control" content="max-age=0" />
@@ -19,25 +19,15 @@
 
 <div>
    <table width="90%">
-   <tr><td><h1>WGL_ShaderArt (C++, Desktop OpenGL WGL, GLEW, GLM, Font5x8)</h1></td></tr>
-   <tr><td><h3>2023</h3></td></tr>
-   <tr><td>Uses WGL hardware accelerated OpenGL Window on Windows64 with 10+ example shaders.</td></tr>
-   <tr><td>The shaders rely on gl_VertexID ( kinda modern ), so i dont need any VAO, VBO or IBO to draw a screen quad.</td></tr>
-   <tr><td>In Release Static mode it produces single exe files, which is what i desired.</td></tr>
-   <tr><td>Offers easy to use events using another class IEventReceiver, which is platform independent. </td></tr>
-   <tr><td>I translate Windows Keys to platform independent key. So i will later be able to add Window classes for other operating systems</td></tr>
-   <tr><td>The full German keyboard is working with Umlauts, which is already better than glfw and Qt. </td></tr>
-   <tr><td>I will do audio synth apps ( still to come ) with this work and have more PianoKeys avail. </td></tr>
-   <tr><td>Uses Desktop OpenGL (WGL), no EGL or GLES dlls needed. </td></tr>
-   <tr><td>WGL is really bad and quirky. I needed to create a second (dummy) window to make opengl work.</td></tr>
-   <tr><td>No MSAA multisampling antialiasing so far by WGL, i will implement it myself with FXAA shader.</td></tr>
-   <tr><td>WGL_EXT_swapinterval was not loading and working, even though it is offered as WGL extension.</td></tr>
-   <tr><td>Maybe this is a Windows 8+ only thing because of DWM, i use DwmFlush() as replacement.</td></tr>
+   <tr><td><h1>Siedler3D OpenGL Game SinglePlayer Desktop (C++, real desktop OpenGL, GLM, Font5x8, cmake, mingw7.3_x64)</h1></td></tr>
+   <tr><td><h3>2024</h3></td></tr>
+   <tr><td>Uses full blown modern hardware accelerated Desktop OpenGL 4.5/4.6 on Windows64.</td></tr>
+   <tr><td>Has SinglePlayer and some AI hopefully for good gaming experience.</td></tr>
    <tr><td></td></tr>
    <tr><td>
    <ul>
-      <li>WGL ( Desktop OpenGL 4.6 on Windows64 )</li>
-      <li>GLEW ( loads all OpenGL commands up to 4.6 at end of WGL window creation phase).</li>
+      <li>WGL - Desktop OpenGL 4.5 (for IntelHD5 on my Surface Pro 4 m3) up to 4.6 (recent modern standard) on Windows64 )</li>
+      <li>GLAD ( loads all OpenGL commands up to 4.6 ).</li>
       <li>GLM ( OpenGL math types, used in IShader/GL_Shader to set uniforms ).</li>
       <li>Font5x8 ( Builtin font to draw text ).</li>
    </ul>
@@ -47,17 +37,22 @@
       or what you have or have not installed on your system.
    </td></tr>
    <tr><td>
-      The tutorials should interest any Windows 3D graphics programmer.
+      The demo should interest any Windows 3D graphics programmer.
    </td></tr>   
    <tr><td>
-      Projects does not need media files. Aka minimal
+      Project uses several media files.
    </td></tr>   
    <tr><td><h4>Download: (full) Sources + Binaries</h4></td></tr>
    <tr><td><img src="../img/7z.png" width="32" height="32" />
-      <a href="./cpp_WGL_ShaderArt.7z" target="_blank">./cpp_WGL_ShaderArt.7z</a>&nbsp;2MB</td></tr>
+      <a href="./cpp_Siedler3D_irr.7z" target="_blank">./cpp_Siedler3D_irr.7z</a>&nbsp;35MB</td></tr>
 
-   <tr><td><h3>Screenshot: cpp_WGL_ShaderArt.png</h3></td></tr>
-   <tr><td><img src="./cpp_WGL_ShaderArt.png" /></td></tr>
+<!--
+   <tr><td><h3>Screenshot: cpp_Siedler3D_irr.png</h3></td></tr>
+   <tr><td><img src="./cpp_Siedler3D_irr.png" /></td></tr>
+   -->
+   <tr><td><h3>Screenshot: cpp_Siedler3D_003.jpg</h3></td></tr>
+   <tr><td><img src="./cpp_Siedler3D_003.jpg" /></td></tr>
+   
      
    </table>
 </div>
@@ -65,11 +60,12 @@
 
 <footer>
    <table width="100%" height="100%">
-   <tr valign="middle"><td align="center"><h6 style="color:white;">(c) 2023 by BenjaminHampe@gmx.de</h6></td></tr>
+   <tr valign="middle"><td align="center"><h6 style="color:white;">(c) 2023-2024 by BenjaminHampe@gmx.de</h6></td></tr>
    </table>
 </footer>
 
 <keywords style="visibility:hidden">
+has some AI for good gaming experience single-player mode with modern game engine glVertexID no vao vbo or ibo 
 interesting general midi gm benni audio dsp backward reverse engineer layered chain
 guarantee text header beware guitar tabs sheetmusic notenblatt override listener ram energy consumption exclusive
 special message container array field oop encapsulated protected private public register blank generation converter
